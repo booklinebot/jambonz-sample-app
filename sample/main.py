@@ -1,5 +1,6 @@
 import logging
 import uvicorn
+import time
 
 from typing import Any
 from fastapi import FastAPI, Request
@@ -9,6 +10,7 @@ app = FastAPI()
 
 @app.post("/hello")
 def hello_world(request: Request) -> Any:
+    time.sleep(60)
     actions = [
         {
             "verb": "say",
