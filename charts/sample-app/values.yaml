@@ -1,0 +1,8 @@
+global:
+  namespace: default
+  clusterIssuer: letsencrypt-prod
+
+app:
+  image: ghcr.io/booklinebot/jambonz-sample-app
+  tag: master
+  ingressHost: public-apps.dev.bookline.io

@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sample-app
+  namespace: {{.Values.global.namespace}}
+  annotations:
+    cert-manager.io/cluster-issuer: {{.Values.global.clusterIssuer}}
+    kubernetes.io/ingress.class: "kong"
+    kubernetes.io/tls-acme: "true"
+spec:
+  rules:
+  - host: {{.Values.app.ingressHost}}
+    http:
+      paths:
+      - path: /
+        backend:
+          service:
+            name: sample-app
+            port:
+              number: 5000
+        pathType: ImplementationSpecific
+  tls:
+  - hosts:
+    - {{.Values.app.ingressHost}}
+    secretName: sample-app-tls

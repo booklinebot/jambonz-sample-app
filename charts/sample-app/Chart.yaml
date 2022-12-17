@@ -1,0 +1,14 @@
+apiVersion: v2
+name: jambonz-sample-app
+version: 0.1.0
+description: Webhook server with a sample Jambonz app for issue troubleshooting
+
+home: https://github.com/booklinebot/jambonz-sample-app
+keywords:
+  - jambonz
+  - voip
+maintainers:
+  - name: Bookline
+    email: digame@bookline.io
+sources: 
+  - https://github.com/booklinebot/jambonz-sample-app

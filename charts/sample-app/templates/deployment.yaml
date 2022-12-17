@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-app
+  namespace: {{.Values.global.namespace}}
+  labels:
+    component: sample-app
+spec:
+  selector:
+    matchLabels:
+      component: sample-app
+  template:
+    metadata:
+      labels:
+        component: sample-app
+    spec:
+      containers:
+        - name: app
+          image: {{ .Values.app.image }}:{{ .Values.app.tag }}
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 5000
