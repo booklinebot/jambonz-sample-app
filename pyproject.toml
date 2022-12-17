@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "sample"
+version = "0.1.0"
+description = ""
+authors = ["Joan Salvatella <joan@bookline.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.88.0"
+uvicorn = "^0.20.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+start = "sample.main:start"
+
+
+[tool.pytest.ini_options]
+addopts = "-q --no-header --disable-warnings"
+pythonpath = ["src"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
