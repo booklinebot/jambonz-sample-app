@@ -23,4 +23,4 @@ def hello_world(request: Request) -> Any:
 
 def start():
     """Launched with `poetry run start` at root level"""
-    uvicorn.run("sample.main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("sample.main:app", host="0.0.0.0", port=5000, reload=True)

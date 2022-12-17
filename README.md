@@ -12,5 +12,5 @@ poetry run start
 This app is also available as a docker image `ghcr.io/booklinebot/jambonz-sample-app`. It can be run with:
 
 ```bash
-docker run ghcr.io/booklinebot/jambonz-sample-app:latest
+docker run -p 5000:5000 ghcr.io/booklinebot/jambonz-sample-app:latest
 ```
