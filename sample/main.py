@@ -1,6 +1,7 @@
 import logging
 import uvicorn
 import time
+import random
 
 from typing import Any
 from fastapi import FastAPI, Request
@@ -10,7 +11,8 @@ app = FastAPI()
 
 @app.post("/hello")
 def hello_world(request: Request) -> Any:
-    time.sleep(60)
+    if random.random() > 0.5:
+        time.sleep(60)
     actions = [
         {
             "verb": "say",
