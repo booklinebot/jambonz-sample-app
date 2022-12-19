@@ -18,7 +18,7 @@ def hello_world(request: Request) -> Any:
             "verb": "say",
             "text": "Hello! This is a sample app for troubleshooting",
             "synthesizer" : {
-                "vendor": "Google",
+                "vendor": "google",
                 "language": "en-US"
             }
         }
