@@ -11,8 +11,8 @@ app = FastAPI()
 
 @app.post("/hello")
 def hello_world(request: Request) -> Any:
-    # if random.random() > 0.5:
-    #     time.sleep(60)
+    if random.random() > 0.5:
+        time.sleep(30)
     actions = [
         {
             "verb": "say",
