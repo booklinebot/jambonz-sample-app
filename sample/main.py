@@ -66,6 +66,12 @@ def hello_world(request: Request) -> Any:
     ]
     return actions
 
+
+@app.post("/status")
+def hello_world(request: Request) -> Any:
+    return 200
+
+
 def start():
     """Launched with `poetry run start` at root level"""
     uvicorn.run("sample.main:app", host="0.0.0.0", port=5000, reload=True)
