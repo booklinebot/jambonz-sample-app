@@ -68,7 +68,7 @@ def hello_world(request: Request) -> Any:
 
 
 @app.post("/status")
-def hello_world(request: Request) -> Any:
+def status(request: Request) -> Any:
     return 200
 
 
