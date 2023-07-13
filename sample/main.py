@@ -18,13 +18,13 @@ def hello_world(request: Request) -> Any:
             "input": ["speech"],
             "timeout": 10,
             "recognizer": {
-                "vendor": "Google",
+                "vendor": "google",
                 "language": "en-US",
             },
             "say": {
                 "text": "Thanks for your troubleshooting efforts",
                 "synthesizer": {
-                    "vendor": "Google",
+                    "vendor": "google",
                     "language": "en-US"
                 }
             }
@@ -35,13 +35,13 @@ def hello_world(request: Request) -> Any:
             "input": ["speech"],
             "timeout": 10,
             "recognizer": {
-                "vendor": "Google",
+                "vendor": "google",
                 "language": "en-US",
             },
             "say": {
                 "text": "This is the 2nd prompt",
                 "synthesizer": {
-                    "vendor": "Google",
+                    "vendor": "google",
                     "language": "en-US"
                 }
             }
@@ -52,13 +52,13 @@ def hello_world(request: Request) -> Any:
             "input": ["speech"],
             "timeout": 10,
             "recognizer": {
-                "vendor": "Google",
+                "vendor": "google",
                 "language": "en-US",
             },
             "say": {
                 "text": "This is the 3rd prompt",
                 "synthesizer": {
-                    "vendor": "Google",
+                    "vendor": "google",
                     "language": "en-US"
                 }
             }
