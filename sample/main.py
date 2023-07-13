@@ -11,15 +11,56 @@ app = FastAPI()
 
 @app.post("/hello")
 def hello_world(request: Request) -> Any:
-    if random.random() > 0.5:
-        time.sleep(30)
     actions = [
         {
-            "verb": "say",
-            "text": "Hello! This is a sample app for troubleshooting",
-            "synthesizer" : {
-                "vendor": "google",
-                "language": "en-US"
+            "verb": "gather",
+            "actionHook": "https://eni9hgp0bdrqn.x.pipedream.net/",
+            "input": ["speech"],
+            "timeout": 10,
+            "recognizer": {
+                "vendor": "Google",
+                "language": "en-US",
+            },
+            "say": {
+                "text": "Thanks for your troubleshooting efforts",
+                "synthesizer": {
+                    "vendor": "Google",
+                    "language": "en-US"
+                }
+            }
+        },
+        {
+            "verb": "gather",
+            "actionHook": "https://eni9hgp0bdrqn.x.pipedream.net/",
+            "input": ["speech"],
+            "timeout": 10,
+            "recognizer": {
+                "vendor": "Google",
+                "language": "en-US",
+            },
+            "say": {
+                "text": "This is the 2nd prompt",
+                "synthesizer": {
+                    "vendor": "Google",
+                    "language": "en-US"
+                }
+            }
+        },
+        {
+            "verb": "gather",
+            "actionHook": "https://eni9hgp0bdrqn.x.pipedream.net/",
+            "input": ["speech"],
+            "timeout": 10,
+            "recognizer": {
+                "vendor": "Google",
+                "language": "en-US",
+            },
+            "say": {
+                "text": "This is the 3rd prompt",
+                "synthesizer": {
+                    "vendor": "Google",
+                    "language": "en-US"
+                }
             }
         }
     ]
